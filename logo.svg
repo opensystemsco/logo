@@ -1,8 +1,22 @@
 <svg viewBox="0 0 1000 1000">
-    <circle cx="500" cy="500" r="350" fill-opacity="0" stroke="black" stroke-width="25" />
-    <circle cx="450" cy="500" r="300" fill-opacity="0" stroke="black" stroke-width="25" />
-    <circle cx="400" cy="500" r="250" fill-opacity="0" stroke="black" stroke-width="25" />
-    <text x="400" y="575" font-family="Arial" font-size="200">
+
+    <defs>
+        <mask id="around-text">
+            <rect width="100%" height="100%" x="0" y="0" fill="white" />
+            <rect width="42.5%" height="20%" x="35%" y="40%" fill="black" />
+        </mask>
+        <mask id="text-top">
+            <rect width="100%" height="100%" x="0" y="0" fill="white" />
+            <rect width="42.5%" height="20%" x="35%" y="40%" fill="black" />
+            <rect width="100%" height="50%" x="0" y="0" fill="black" />
+        </mask>        
+    </defs>
+
+    <circle cx="42.5%" cy="50%" r="32.5%" fill-opacity="0" stroke="black" stroke-width="3.5%" style="mask: url(#around-text)" />
+    <circle cx="35%" cy="50%" r="25%" fill-opacity="0" stroke="black" stroke-width="3.5%" style="mask: url(#text-top)" />
+    <circle cx="27.5%" cy="50%" r="17.5%" fill-opacity="0" stroke="black" stroke-width="3.5%" style="mask: url(#text-top)" />
+    <text x="35%" y="57.5%" font-family="Red Hat Display" font-size="1500%" font-weight="700">
         OSCO
     </text>
+    
 </svg>
